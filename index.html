@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Marvin Diaz">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-   <h1>Marvin Diaz</h1>
+   <h1 id="name-header">Marvin Diaz</h1>
    <section id="About">
-        <h2 style="border: 2px solid Black;">About</h2>
+        <h2 style="border: 2px solid black;">About</h2>
+        <img src="MD.jpeg"
+            alt="Marvin Diaz Headshot"
+            id="profile-picture">
         <p>Software Development student at Code the Dream.</p>
    </section>
    <section id="Experience">
@@ -24,8 +29,16 @@
    <section id="Connect">
         <h2 style="border: 2px solid Black;">Connect</h2>
         <ul>
-            <li><a href="mailto:marvin.diaz1@gmail.com">marvin.diaz1@gmail.com</a></li>
-            <li><a href="https://github.com/marvindcode/" target="_blank">Github: marvindcode</a></li>
+            <li>
+                <a href="mailto:marvin.diaz1@gmail.com">
+                    <i class="fas fa-envelope"></i> marvin.diaz1@gmail.com
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/marvindcode/" target="_blank">
+                    <i class="fab fa-github"></i> Github: marvindcode
+                </a>
+            </li>
         </ul> 
    </section>
    
@@ -34,9 +47,11 @@
         background-image: url('keyboard.jpg');
     }
    </style>
-
+<section id="email">
+    <h2 style="border: 2px solid Black;">Suscribe</h2>
    <input type = "text" placeholder="Enter your email" />
    <button onclick="alert('Thank you for subscribing!')">OK!</button>
+</section>
 
 </body>
 </html>
