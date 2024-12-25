@@ -1,88 +1,207 @@
 * {
     color: blue;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 25px;
 }
 
 body {
-    background-color: grey;
-}
-
-h1 {
-    margin-top: 40px;
-    margin-left: 40px;
-    margin-right: 40px;
-}
-
-section {
-    margin-top: 10px;
-    text-align: center;
-}
-
-ul {
-    list-style:none;
+    margin: 0;
     padding: 0;
 }
 
-.frame {
-    border: 2px solid rgb(7, 156, 172);
-    padding: 10px;
-    font-size:3rem;
-    font-weight: 200;
-    color: rgb(3, 3, 185);
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    z-index: 1000;
+    padding: 10px 0;
 }
 
-#name-header {
-    font-family: "Open_Sans";
-    font-size:2rem;
-    color: rgb(60, 102, 127);
-    padding-top: 0.1;
-    background-color: rgb(4, 20, 97);
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007BFF;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    flex: 1;
+    min-width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    border-radius:20%
+}
+
+section h2 {
+    text-align: center;
+    color: blue; 
+    margin-bottom: 15px;
+}
+
+.skills-columns,
+.projects-columns {
+    display: flex;
+    font: white;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.skills-columns ul,
+.projects-columns ul {
+    flex: 1;
+    list-style: none;
+    padding: 0;
+}
+
+.skills-columns ul li,
+.projects-columns ul li {
+    color: white; 
+    margin: 5px 0;
+    text-align: center;
+}
+
+#Experience {
+    padding: 20px;
+}
+
+.experience-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.experience-title {
+    font-weight: bold;
+    color: #333;
+}
+
+.experience-date {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.experience-item p {
+    margin: 5px 0 0;
+}
+
+#Connect {
+    padding: 20px;
+    background-color: #f5f5f5; 
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.connect-links {
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+}
+
+.connect-item {
+    text-decoration: none;
+    color: #333; 
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 8px; 
+    border: 2px solid #ccc; 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.connect-item:hover {
+    background-color: #007BFF; 
+    color: white; 
+    border-color: #0056b3;
+}
+
+.connect-item i {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.connect-item:hover i {
+    color: white; 
 }
 
 #email {
     text-align: center;
 }
 
+.flex-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    background-color: #1d3c41;
+}
+
+h1 {
+    font-family: "Open_Sans";
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+    background-color: rgb(4, 20, 97);
+    text-align: center;
+    border-radius: 20%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+img {
+    background-image: url('images/keyboard.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
 #profile-picture {
     border-radius: 2%;
     margin: 1em;
     width: 5vw;
-    border-color:azure;
-    border-width: 1dvi;
+    border-color: azure;
+    border-width: 1px;
     border-style: transparent;
 }
 
-#Experience ul li {
-        background: #cfd1d3;
-        color: rgb(0, 0, 251);
-        margin: 5px;
-      }
-
-#Connect a {
-    text-decoration: none; 
-    color: rgb(3, 3, 185); 
-    font-weight: bold; 
-    transition: color 0.3s ease, transform 0.3s ease; 
-    display: inline-block; 
+ul {
+    list-style: none;
+    padding: 0;
 }
-
-#Connect a:hover {
-    color: rgb(4, 126, 13); 
-    transform: scale(1.1); 
-    text-decoration: underline; 
-}
-
-#Connect a i {
-    margin-right: 8px; 
-    color: rgb(4, 20, 97); 
-    transition: color 0.3s ease; 
-}
-
-#Connect a:hover i {
-    color: rgb(4, 126, 13); 
-}
-
 

@@ -9,49 +9,90 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-   <h1 id="name-header">Marvin Diaz</h1>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#About">About</a></li>
+            <li><a href="#Experience">Experience</a</li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Connect">Connect</a></li>    
+        </ul>
+    </nav>
+
+   <h1 id="name-header">MARVIN DIAZ</h1>
+
    <section id="About">
-        <h2 class="frame">About</h2>      
+        <h2 class="shape">About</h2>      
         <img src="images/MD.jpeg"
             alt="Marvin Diaz Headshot"
             id="profile-picture">
         <p>Software Development student at Code the Dream.</p>
    </section>
-   <section id="Experience">
-        <h2 class="frame">Experience</h2>        
-        <ul>
-            <li>Master in Business Intelligence</li>
-            <li>Experience as Business Analyst</li>
-            <li>Knowledge of SQL, Power BI, Tableau and Excel</li>
-            <li>Economist</li>
-        </ul>
-   </section>
-   <section id="Connect">
-        <h2 class="frame">Connect</h2>      
-        <ul>
-            <li>
-                <a href="mailto:marvin.diaz1@gmail.com">
-                    <i class="fas fa-envelope"></i> marvin.diaz1@gmail.com
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/marvindcode/" target="_blank">
-                    <i class="fab fa-github"></i> Github: marvindcode
-                </a>
-            </li>
-        </ul> 
-   </section>
-   
-   <style>
-    body {
-        background-image: url('images/keyboard.jpg');
-    }
-   </style>
-<section id="email">
-    <h2 class="frame">Suscribe</h2>
-   <input type = "text" placeholder="Enter your email" />
-   <button onclick="alert('Thank you for subscribing!')">OK!</button>
-</section>
 
+   <section id="Experience">
+        <h2 class="shape">Experience</h2>        
+        <div class="experience-item">
+            <div class="experience-title">Master in Business Intelligence</div>
+            <div class="experience-date">2020-2022</div>
+            <p>Focused on data analytics, visualization, and decision-making strategies.</p>
+        </div>
+        <div class="experience-item">
+            <div class="experience-title">Business Analyst</div>
+            <div class="experience-date">2018-2020</div>
+            <p>Analyzed business processes and provided actionable insights to stakeholders.</p>
+        </div>
+   </section>
+
+    <main class="flex-container">
+    <section id="Skills">
+        <h2>Skills</h2>
+        <div class="skills-columns">
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+            <ul>
+                <li>SQL</li>
+                <li>Excel</li>
+            </ul>
+        </div>
+    </section>
+    <section id="Projects">
+        <h2>Projects</h2>
+        <div class="projects-columns">
+            <ul>
+    
+            </ul>
+    
+        </div>
+    </section>
+    </main>
+   <section id="Connect">
+        <h2 class="shape">Connect</h2>   
+        <div class="connect-links">
+            <a href="mailto:marvin.diaz1@gmail.com">
+                <i class="fas fa-envelope"></i> marvin.diaz1@gmail.com
+            </a>
+            <a href="https://github.com/marvindcode/" target="_blank">
+                <i class="fab fa-github"></i> Github: marvindcode
+            </a>
+            <a href="https://www.linkedin.com/in/marvin-diaz-19aa30116/" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn: Marvin Diaz
+            </a>
+        </div>
+    </section>
+   
+    <section id="email">
+        <h2 class="shape">Suscribe</h2>
+        <input type = "text" placeholder="Enter your email" />
+        <button onclick="alert('Thank you for subscribing!')">OK!</button>
+    </section>
 </body>
 </html>
+
+<style>
+    body {
+        background-image: url('images/keyboard.jpg');
+        }
+</style>
