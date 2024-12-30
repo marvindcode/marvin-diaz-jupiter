@@ -57,50 +57,40 @@ section h2 {
     margin-bottom: 15px;
 }
 
-.skills-columns,
-.projects-columns {
+#Skills ul,
+#Projects ul {
     display: flex;
-    font: white;
-    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 20px;
-}
-
-.skills-columns ul,
-.projects-columns ul {
-    flex: 1;
+    justify-content: space-between;
+    background-color: #f5f5f5; 
+    padding: 20px;
     list-style: none;
-    padding: 0;
 }
 
-.skills-columns ul li,
-.projects-columns ul li {
-    color: white; 
+#Skills ul li,
+#Projects ul li {
+    color: blue; 
     margin: 5px 0;
     text-align: center;
+    width: 40%;
 }
 
-#Experience {
-    padding: 20px;
-}
-
-.experience-item {
+#Experience ul {
     display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    background-color: #f5f5f5; 
+    padding: 20px;
+    list-style: none;
 }
 
-.experience-title {
-    font-weight: bold;
-    color: #333;
-}
-
-.experience-date {
-    font-size: 0.9rem;
-    color: #777;
-}
-
-.experience-item p {
-    margin: 5px 0 0;
+#Experience ul li {
+    color: blue; 
+    margin: 5px 0;
+    text-align: center;
+    width: 40%;
 }
 
 #Connect {
