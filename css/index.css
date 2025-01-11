@@ -1,3 +1,5 @@
+/* This design is Desktop-first: */
+
 body, p, h1, a {
     color: rgb(67, 67, 70);
     font-family: sans-serif;
@@ -6,7 +8,6 @@ body, p, h1, a {
 }
 
 body {
-    /* background-image: url('images/keyboard.jpg'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -68,14 +69,14 @@ section h2 {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
-    background-color: #f5f5f5; 
+    background-color: #f5f5f5;
     padding: 20px;
     list-style: none;
 }
 
 #Skills ul li,
 #Projects ul li {
-    color: rgb(67, 67, 70); 
+    color: rgb(67, 67, 70);
     margin: 5px 0;
     text-align: center;
     width: 40%;
@@ -86,13 +87,13 @@ section h2 {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
-    background-color: #f5f5f5; 
+    background-color: #f5f5f5;
     padding: 20px;
     list-style: none;
 }
 
 #Experience ul li {
-    color: blue; 
+    color: blue;
     margin: 5px 0;
     text-align: center;
     width: 40%;
@@ -189,11 +190,20 @@ ul {
     margin: 20px auto;
 }
 
+html {
+    scroll-padding-top: 60px;
+}
+
 /* tablet style*/
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
     .nav-links {
         flex-direction: column;
         align-items: center;
+        font-size: 1.2rem; 
+    }
+
+    .nav-links li {
+        margin: 15px 0; 
     }
 
     section {
@@ -224,8 +234,7 @@ ul {
 
     #profile-picture {
         width: 100px;
-        height: 100px;
-        border: 2px solid #fff;
+        border: 2px solid #fff; 
     }
 
     .text-section {
