@@ -68,18 +68,18 @@ section h2 {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-between;
-    background-color: #f5f5f5;
-    padding: 20px;
+    justify-content: center;
+    padding: 0;
     list-style: none;
 }
 
 #Skills ul li,
 #Projects ul li {
     color: rgb(67, 67, 70);
-    margin: 5px 0;
-    text-align: center;
-    width: 40%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);;
+    font-weight: bold;
 }
 
 #Experience ul {
@@ -214,6 +214,14 @@ html {
     #profile-picture {
         width: 8vw;
     }
+
+    #skills ul {
+        justify-content: space-between;
+    }
+
+    #skills li {
+        flex: 1 1 calc(50% - 20px);
+    }
 }
 
 /* mobile style*/
@@ -235,6 +243,15 @@ html {
     #profile-picture {
         width: 100px;
         border: 2px solid #fff; 
+    }
+
+    #skills ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #skills li {
+        width: 100%
     }
 
     .text-section {
