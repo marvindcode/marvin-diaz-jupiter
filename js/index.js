@@ -127,14 +127,13 @@ fetch("https://api.github.com/users/marvindcode/repos")
 
         //Loop through repositories array and:
         for (let i=0; i < repositories.length; i++) {
-            //Get specific project data out
-            const project = repositories[i].name;
             //Create DOM elements
-            const li = document.createElement("li");
-            //Put the data from the Project into the DOM element (li)
-            li.innerText = project;
+            const project = document.createElement("li");
+            //Get specific project data out
+            project.innerText = repositories[i].name;
+
             //Add DOM elements to page
-            projectList.appendChild(li);
+            projectList.appendChild(project);
         }
     })
 
