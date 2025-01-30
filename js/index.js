@@ -111,3 +111,37 @@ function toggleMessagesVisibility() {
 }
 
 toggleMessagesVisibility();
+
+//DOM SELECTORS (Getting HTML elements)
+const projectSection = document.getElementById("Projects");
+const projectList = projectSection.querySelector("ul");
+
+//Fetch (Getting Perojects from GitHub API)
+fetch("https://api.github.com/users/marvindcode/repos")
+    .then((res) => {
+        return res.json();
+    })
+    .then((repositories) => {
+        //Add repositories to DOM
+        console.log("repositories: ", repositories);
+
+        //Loop through repositories array and:
+        for (let i=0; i < repositories.length; i++) {
+            //Create DOM elements
+            const project = document.createElement("li");
+            //Get specific project data out
+            project.innerText = repositories[i].name;
+
+            //Add DOM elements to page
+            projectList.appendChild(project);
+        }
+    })
+
+    .catch((error) => {
+        //Add error message to DOM
+        console.log(error);
+        const errorMessage = document.createElement("p");
+        errorMessage.innerText = error.message;
+        errorMessage.classList.add("error");
+        projectSection.appendChild(errorMessage);
+    });
