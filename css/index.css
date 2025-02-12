@@ -1,37 +1,22 @@
-* This design is Desktop-first: */
+/* This design is Desktop-first: */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
 
-body, p, h1 {
+body {
     color: rgb(67, 67, 70);
     font-family: sans-serif;
     line-height: 25px;
     text-align: center;
-}
-
-body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    position: relative;
     margin: 0;
     padding: 0;
 }
 
-html {
-    scroll-padding-top: 60px;
-}
-
-h1 {
-    font-family: sans-serif;
-    font-size: 3rem;
-    font-weight: bold;
-    color: white;
-    padding: 20px;
-    background-color: rgb(4, 20, 97);
-    text-align: center;
-    border-radius: 15%;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
+/* Navigation */
 nav {
     position: sticky;
     top: 0;
@@ -63,10 +48,19 @@ nav {
     color: #007BFF;
 }
 
-.error {
-    color: red;
+/* Header */
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+    background-color: rgb(4, 20, 97);
+    text-align: center;
+    border-radius: 15%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Sections */
 section {
     padding: 20px;
     margin: 20px auto;
@@ -79,10 +73,34 @@ section {
 
 section h2 {
     font-size: 2rem;
-    color: blue;
+    color: rgb(7, 7, 178);
     margin-bottom: 15px;
 }
 
+#About {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#About.text-section {
+    background-color: #b2cbf5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+/* Profile Picture */
+#profile-picture {
+    border-radius: 10%;
+    display: block;
+    margin: 10px auto;
+    width: 70%;
+    max-width: 200px;
+    height: auto;
+}
+
+/* Skills and Projects */
 #Skills ul,
 #Projects ul {
     display: flex;
@@ -95,34 +113,34 @@ section h2 {
 
 #Skills ul li,
 #Projects ul li {
-    color: rgb(67, 67, 70);
+    background-color: #e4ebf6;
+    color: rgb(10, 10, 84);
     padding: 10px 20px;
     border-radius: 5px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);;
+    box-shadow: 0px 2px 4px rgba(13, 36, 163, 0.1);
     font-weight: bold;
-    cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
 #Skills ul li:hover,
 #Projects ul li:hover {
-    box-shadow: 0px 0 px 10px 0px rgba(0, 0, 0, 0.2);
     background-color: aliceblue;
     transform: scale(1.05);
 }
 
+/* Experience Section */
 #Experience ul {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
-    background-color: #f5f5f5;
+    background-color: #e4ebf6;
     padding: 20px;
     list-style: none;
 }
 
 #Experience ul li {
-    color: blue;
+    color: rgb(7,7,178);
     margin: 5px 0;
     text-align: center;
     width: 40%;
@@ -132,6 +150,7 @@ section h2 {
     color: black;
 }
 
+/* Connect Section */
 .connect-links {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -139,239 +158,123 @@ section h2 {
     padding: 20px;
 }
 
-.connect-item {
+.connect-links a {
+    color: rgb(10, 10, 84);
     text-decoration: none;
-    color: #333;
-    font-size: 1.2rem;
     font-weight: bold;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    text-align: center;
-    transition: transform 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease; 
 }
 
-.connect-item:hover {
-    transform: scale(1.05);
-    background-color: #007BFF;
+.connect-links a:hover {
+    color: #007BFF; 
+    transform: scale(1.05); 
+    background-color: rgba(0, 123, 255, 0.1);  
+    border-radius: 5px; 
 }
 
-#email input[type="text"] {
-    width: 80%;
-    padding: 10px;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
+.connect-links a:visited {
+    color: rgb(10, 10, 84); 
 }
 
-#email button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#email button:hover {
-    background-color: #0056b3;
-}
-
-.flex-container {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    flex-wrap: wrap;
-    background-color: #1d3c41;
-}
-
-#profile-picture {
-    border-radius: 10%;
-    margin: 1em;
-    width: 5vw;
-    border-color: azure;
-    border-width: 1px;
-    border-style: transparent;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-.text-section {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 900px;
-    margin: 20px auto;
-}
-
-/* tablet style*/
-@media (min-width: 481px) and (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-        font-size: 1.2rem; 
-    }
-
-    .nav-links li {
-        margin: 15px 0; 
-    }
-
-    section {
-        padding: 15px;
-        margin: 10px auto;
-    }
-
-    #profile-picture {
-        width: 8vw;
-    }
-
-    #skills ul {
-        justify-content: space-between;
-    }
-
-    #skills li {
-        flex: 1 1 calc(50% - 20px);
-    }
-}
-
-/* mobile style*/
-@media (max-width: 480px) {
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    section h2 {
-        font-size: 1.8rem;
-        color: #333;
-    }
-
-    #profile-picture {
-        width: 100px;
-        border: 2px solid #fff; 
-    }
-
-    #skills ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    #skills li {
-        width: 100%
-    }
-
-    .text-section {
-        padding: 10px;
-        max-width: 90%;
-    }
-
-    .text-section h2 {
-        font-size: 1.5rem;
-    }
-
-    .text-section p {
-        font-size: 1rem;
-        line-height: 20px;
-    }
-}
-
+/* Forms */
 form[name="leave_message"] {
     margin: 20px auto;
     padding: 20px;
-    background-color: #f5f5f5;
+    background-color: #e4ebf6;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 600px;
-}
-
-form[name="leave_message"] label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 form[name="leave_message"] input,
-form[name="leave_message"] textarea,
-form[name="leave_message"] button {
+form[name="leave_message"] textarea {
     width: 100%;
     margin-bottom: 15px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
+    box-sizing: border-box;
 }
 
 form[name="leave_message"] button {
-    background-color: #007BFF;
-    color: white;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0056b3;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-sizing: border-box;
 }
 
 form[name="leave_message"] button:hover {
-    background-color: #0056b3;
+    background-color: #6b90b7;
 }
 
-#messages {
-    margin: 20px auto;
-    max-width: 600px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+/* Tablet Styles */
+@media (min-width: 481px) and (max-width: 768px) {
+    html {
+        scroll-padding-top: 70px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #profile-picture {
+        width: 30%;
+        max-width: 120px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+        padding: 15px;        
+    }
+
+    section {
+        padding: 15px;
+        margin: 15px auto;
+    }
+    
+    section h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
 }
 
-#messages ul {
-    list-style: none;
-    padding: 0;
-}
+/* Mobile Styles */
+@media (max-width: 480px) {
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 
-#messages li {
-    padding: 10px 15px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    #profile-picture {
+        width: 50%;
+        max-width: 100px;
+    }
 
-#messages li a {
-    color: #007BFF;
-    text-decoration: none;
-}
+    h1 {
+        font-size: 1.5rem;
+        padding: 8px;        
+    }
 
-#messages li a:hover {
-    text-decoration: underline;
-}
+    section {
+        padding: 10px;
+        margin: 10px auto;
+    }
+    
+    section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
 
-#messages li button {
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-#messages li button:hover {
-    background-color: #cc0000;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    font-size: 1rem;
-    color: rgb(67, 67, 70);
 }
