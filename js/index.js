@@ -136,7 +136,6 @@ fetch("https://api.github.com/users/marvindcode/repos")
             projectList.appendChild(project);
         }
     })
-
     .catch((error) => {
         //Add error message to DOM
         console.log(error);
